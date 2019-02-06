@@ -14,13 +14,13 @@ function preload()
 function setup() 
 {
   // put setup code here
-  createCanvas(320,317,WEBGL);
+  createCanvas(420,517);
 }
 
 function draw() 
 {
   // put drawing code here
-  background(174);
-  model(objects);
+  
+  ellipse(232,225,60,60);
   line(132,144,87,92);
 }
