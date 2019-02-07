@@ -1,3 +1,4 @@
+
 <html>
 	<head>
 		<title>My first three.js app</title>
@@ -68,14 +69,12 @@
 			var cRack= new THREE.MeshBasicMaterial( { color: 0xffff00,wireframe:true } );
 			var lathe = new THREE.Mesh( bPt,cRack);
 		
+			//Add Sphere
+			var geometry = new THREE.SphereGeometry( 5, 32, 32 );
+			var material = new THREE.MeshBasicMaterial( {color: 0xffff00} );
+			var sphere = new THREE.Mesh( geometry, material );
+			scene.add( sphere );
 			
-			//Sphere
-
-			var cir = new THREE.SphereGeometry(5,20,20);
-			var y = new THREE.MeshBasicMaterial({color: 0xffff00,wireframe:false});
-			var z = new THREE.Mesh(cir,y);
-
-
 
 			//Add scene
 			scene.add(cube);
@@ -83,7 +82,7 @@
 			scene.add(line);
 			scene.add(h);
 			scene.add( lathe );
-			scene.add(z);
+			
 
 			//Camera positions
 			camera.position.y = 1;
