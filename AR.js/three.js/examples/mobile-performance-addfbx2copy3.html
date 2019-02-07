@@ -230,7 +230,7 @@
                     child.receiveShadow = true;
                 }
             } );
-            object.scale.set(.02, .02, .02);
+            object.scale.set(.1, .1, .1);
             arWorldRoot.add( object );
         } );
         //end fbx code
@@ -259,21 +259,21 @@
              }
          };
 
-         // var onError = function ( xhr ) {
-         // };
+         var onError = function ( xhr ) {
+         };
 
-         // var loader = new THREE.OBJLoader( manager );
-         // loader.load( '../../data/data/male02/male02.obj', function ( object ) {
+         var loader = new THREE.OBJLoader( manager );
+         loader.load( '../../data/data/male02/male02.obj', function ( object ) {
 
-         //     object.traverse( function ( child ) {
+             object.traverse( function ( child ) {
 
-         //         if ( child instanceof THREE.Mesh ) {
+                 if ( child instanceof THREE.Mesh ) {
 
-         //             child.material.map = texture;
+                     child.material.map = texture;
 
-         //         }
+                 }
 
-         //     } );
+             } );
 
  //					object.position.y = - 95;
  //					scene.add( object );
