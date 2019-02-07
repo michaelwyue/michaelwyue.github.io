@@ -15,6 +15,7 @@ function draw()
 		for(var j = 0; j <= height; j+=50)
 		{
 			ellipse(i,j,40,42);
+			rect(i-1,j+2,30,30);
 		}
 	}
 
