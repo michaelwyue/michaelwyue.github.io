@@ -1,8 +1,6 @@
 
 
 
-
-
 function setup() 
 {
   // put setup code here
@@ -11,6 +9,14 @@ function setup()
 
 function draw() 
 {
-  // put drawing code here
-  rect(142,154,200,205);
+  
+	for(var i = 0; i <= width; i+=50)
+	{
+		for(var j = 0; j <= height; j+=50)
+		{
+			ellipse(i,j,40,42);
+		}
+	}
+
+
 }
