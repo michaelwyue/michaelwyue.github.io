@@ -69,6 +69,13 @@
 			var lathe = new THREE.Mesh( bPt,cRack);
 		
 			
+			//Sphere
+
+			var cir = new THREE.SphereGeometry(5,20,20);
+			var y = new THREE.MeshBasicMaterial({color: 0xffff00,wireframe:false});
+			var z = new THREE.Mesh(cir,y);
+
+
 
 			//Add scene
 			scene.add(cube);
@@ -76,7 +83,7 @@
 			scene.add(line);
 			scene.add(h);
 			scene.add( lathe );
-			
+			scene.add(z);
 
 			//Camera positions
 			camera.position.y = 1;
