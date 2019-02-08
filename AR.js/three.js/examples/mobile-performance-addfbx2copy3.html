@@ -249,7 +249,7 @@
          };
 
          var textureLoader = new THREE.TextureLoader( manager );
-         var texture = textureLoader.load( '../../data/data/seal.png' );
+         var texture = textureLoader.load( '../../data/data/cheetah.jpeg' );
 
          // obj model
          var onProgress = function ( xhr ) {
@@ -307,7 +307,7 @@
                     .load( 'squares.obj', function ( object ) {
                         object.scale.set(.4, .4, .4);
                         arWorldRoot.add( object );
-                    }, onProgress, onError ());
+                    }, onProgress, onError );
             } );
         
 
