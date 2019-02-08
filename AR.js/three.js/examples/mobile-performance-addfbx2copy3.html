@@ -168,20 +168,20 @@
         //      you can copy source code for simple shape from the three.js playground here: http://threejsplaygnd.brangerbriz.net/gui/
         //      for more on using 3D models with AR.js and A-Frame see here: https://medium.com/@akashkuttappa/using-3d-models-with-ar-js-and-a-frame-84d462efe498
         //////////////////////////////////////////////////////////////////////////////////
-        var arWorldRoot = smoothedRoot;
-        var geometry, material, mesh;
+//         var arWorldRoot = smoothedRoot;
+//         var geometry, material, mesh;
         
-//        ///////////////////////////////////////////////////////////
-//        // add a static cube
-        geometry = new THREE.CubeGeometry(1,1,1);
-        material = new THREE.MeshNormalMaterial({
-            transparent : true,
-            opacity: 0.5,
-            side: THREE.DoubleSide
-        }); 
-        mesh = new THREE.Mesh( geometry, material );
-        mesh.position.y	= geometry.parameters.height/2
-        arWorldRoot.add(mesh);
+// //        ///////////////////////////////////////////////////////////
+// //        // add a static cube
+//         geometry = new THREE.CubeGeometry(1,1,1);
+//         material = new THREE.MeshNormalMaterial({
+//             transparent : true,
+//             opacity: 0.5,
+//             side: THREE.DoubleSide
+//         }); 
+//         mesh = new THREE.Mesh( geometry, material );
+//         mesh.position.y	= geometry.parameters.height/2
+//         arWorldRoot.add(mesh);
 //        // end cube code
 //        ///////////////////////////////////////////////////////////
         
@@ -195,9 +195,9 @@
         // material = new THREE.MeshNormalMaterial({shading: THREE.FlatShading});
         // mesh = new THREE.Mesh(geometry, material);
         
-        //Keep these lines
-        mesh.position.y	= 0.5 //position y equals how far away from target 
-        arWorldRoot.add( mesh ); //instead of adding mesh to the scene right away we add only when the target is detected
+        // //Keep these lines
+        // mesh.position.y	= 0.5 //position y equals how far away from target 
+        // arWorldRoot.add( mesh ); //instead of adding mesh to the scene right away we add only when the target is detected
         //end icosphere code
         ///////////////////////////////////////////////////////////
         
@@ -249,7 +249,7 @@
          };
 
          var textureLoader = new THREE.TextureLoader( manager );
-         var texture = textureLoader.load( '../../data/data/cheetah.jpeg' );
+         var texture = textureLoader.load( '../../data/data/seal.png' );
 
          // obj model
          var onProgress = function ( xhr ) {
@@ -299,12 +299,12 @@
         THREE.Loader.Handlers.add( /\.dds$/i, new THREE.DDSLoader() );
         new THREE.MTLLoader()
             .setPath( '../../data/data/' )
-            .load( 'stacks.mtl', function ( materials ) {
+            .load( 'squares.mtl', function ( materials ) {
                 materials.preload();
                 new THREE.OBJLoader()
                     .setMaterials( materials )
                     .setPath( '../../data/data/' )
-                    .load( 'stacks.obj', function ( object ) {
+                    .load( 'squares.obj', function ( object ) {
                         object.scale.set(.4, .4, .4);
                         arWorldRoot.add( object );
                     }, onProgress, onError );
