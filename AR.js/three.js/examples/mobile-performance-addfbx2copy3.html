@@ -249,7 +249,7 @@
          };
 
          var textureLoader = new THREE.TextureLoader( manager );
-         var texture = textureLoader.load( '../../data/data/card.jpg' );
+         var texture = textureLoader.load( '../../data/data/grid.jpg' );
 
          // obj model
          var onProgress = function ( xhr ) {
@@ -299,12 +299,12 @@
         THREE.Loader.Handlers.add( /\.dds$/i, new THREE.DDSLoader() );
         new THREE.MTLLoader()
             .setPath( '../../data/data/' )
-            .load( 'squares.mtl', function ( materials ) {
+            .load( 'glass-model.mtl', function ( materials ) {
                 materials.preload();
                 new THREE.OBJLoader()
                     .setMaterials( materials )
                     .setPath( '../../data/data/' )
-                    .load( 'squares.obj', function ( object ) {
+                    .load( 'glass-model.obj', function ( object ) {
                         object.scale.set(.4, .4, .4);
                         arWorldRoot.add( object );
                     }, onProgress, onError );
