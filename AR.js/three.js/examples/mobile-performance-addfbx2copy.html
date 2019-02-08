@@ -320,7 +320,7 @@
                 console.log( Math.round( percentComplete, 2 ) + '% downloaded' );
             }
         };
-        var onError = function () { };
+        var theError = function () { };
         THREE.Loader.Handlers.add( /\.dds$/i, new THREE.DDSLoader() );
         new THREE.MTLLoader()
             .setPath( '../../data/data/' )
@@ -332,7 +332,7 @@
                     .load( 'stacks.obj', function ( object ) {
                         object.scale.set(.3, .3, .3);
                         arWorldRoot.add( object );
-                    }, onProgress, onError ());
+                    }, onProgress, theError ());
             } );
         
     animate();
