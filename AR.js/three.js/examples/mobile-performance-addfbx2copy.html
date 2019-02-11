@@ -307,6 +307,7 @@
                     .load( 'salt-shaker.obj', function ( object ) {
                         object.scale.set(.4, .4, .4);
                         arWorldRoot.add( object );
+
                     }, onProgress, onError );
             } );
         
@@ -359,6 +360,10 @@
                 }
                 renderer.render( scene, camera );
                 stats.update();
+
+                onError.rotate.x += 0.02;
+                onError.rotate.y += 0.01;
+                onError.rotate.z -= 0.0023;
             }
     
 </script></body>
