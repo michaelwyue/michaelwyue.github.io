@@ -360,10 +360,10 @@
                 }
                 renderer.render( scene, camera );
                 stats.update();
+                object.rotate.x += 0.002;
+                object.rotate.y += 0.001;
+                object.rotate.z -= 0.002;
 
-                onError.rotate.x += 0.02;
-                onError.rotate.y += 0.01;
-                onError.rotate.z -= 0.0023;
             }
     
 </script></body>
