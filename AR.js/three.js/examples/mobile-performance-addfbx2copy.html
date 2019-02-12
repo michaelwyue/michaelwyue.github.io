@@ -300,12 +300,12 @@
         THREE.Loader.Handlers.add( /\.dds$/i, new THREE.DDSLoader() );
         new THREE.MTLLoader()
             .setPath( '../../data/data/' )
-            .load( 'square.mtl', function ( materials ) {
+            .load( 'glass-model.mtl', function ( materials ) {
                 materials.preload();
                 new THREE.OBJLoader()
                     .setMaterials( materials )
                     .setPath( '../../data/data/' )
-                    .load( 'square.obj', function ( object ) {
+                    .load( 'glass-model.obj', function ( object ) {
                         object.scale.set(.4, .4, .4);
                         arWorldRoot.add( object );
 
