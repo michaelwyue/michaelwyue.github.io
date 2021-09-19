@@ -1,0 +1,174 @@
+<!DOCTYPE HTML>
+<!--Homepage index.html-->
+<html>
+    <head>
+        <meta name="viewport" content="with=device-width, initial-scale=1.0">
+        <title>Multi-Portfolio Page</title>
+        <link rel="stylesheet" href="mainStyle.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com"> 
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <section class="header">
+           <nav>
+               <a href="index.html"><img src="eduford_img/logo.png"></a>
+               <div class="nav-links" id="navLinks">
+                   <i class="fa fa-times" onclick="hideMenu()"></i>
+                   <ul>
+                       <li><a href="">Homepage</a></li>
+                       <li><a href="gallery.html">Gallery</a></li>
+                       <li><a href="about.html">About</a></li>
+                       <li><a href="">CV</a></li>
+                       <!--<li><a href="mailto:michaelwyue@yahoo.com">Contact</a></li>-->
+                       <li><a href="">Artist Statement</a></li>
+                   </ul>
+               </div>
+               <i class="fa fa-bars" onclick="showMenu()"></i>
+           </nav>
+            
+            <div class="text-box">
+                <h1>Michael Yue's Portfolio</h1>
+                <p> Portfolio page to all the artwork from Photoshop, web and graphic design, <br>3D modeling from Solidworks and Autodesk.</p>
+                <a href="" class="hero-btn">Click here to the galleries</a>
+            </div>
+            
+        </section>
+        
+     
+        <!--Course section-->
+        <section class="course">
+            <h1> About the Artworks</h1>
+            <p> More text here coming soon to this paragraph block.</p>
+                <div class="row">
+                    <div class="course-col">
+                        <h3> Photography</h3>
+                        <p> coming more soon.</p>
+                    
+                    </div>
+                    <div class="course-col">
+                        <h3>3D Modeling</h3>
+                        <p>coming more soon.</p>
+                    
+                    </div>
+                    <div class="course-col">
+                        <h3>Photoshop and Graphic Design</h3>
+                        <p> coming more soon.</p>
+                    
+                    </div>
+            
+                </div>
+            
+            
+        </section>
+        
+        <!--art-->
+        <section class="art">
+            <h1> My Artworks from Past to Present</h1>
+            <p> Here are the works from 2015-2019</p>
+                <div class="row">
+                    <div class="art-col">
+                        <img src="eduford_img/london.png">
+                           <div class="layer">
+                               <h3>Title Post Here</h3>
+                           </div>
+                    </div>
+                    <div class="art-col">
+                        <img src="eduford_img/newyork.png">
+                           <div class="layer">
+                               <h3>Artwork</h3>
+                           </div>
+                    </div>
+                    <div class="art-col">
+                        <img src="eduford_img/washington.png">
+                           <div class="layer">
+                               <h3>Washington</h3>
+                           </div>
+                    </div>
+                    
+                </div>
+        </section>
+        
+        
+        <!--Facilities-->
+        
+        <section class="facilities">
+            <h1> Our Facilities</h1>
+            <p>Text Post Here.</p>
+                <div class="row">
+                    <div class="facilities-col">
+                          <img src="eduford_img/library.png">
+                            <h3>Library</h3>
+                           <p>Text</p>
+                    </div>
+                    <div class="facilities-col">
+                          <img src="eduford_img/basketball.png">
+                            <h3>Playground</h3>
+                           <p>Text02</p>
+                    </div>
+                    <div class="facilities-col">
+                          <img src="eduford_img/cafeteria.png">
+                            <h3>Cafeteria</h3>
+                           <p>Text03</p>
+                    </div>
+                </div>
+            
+        </section>
+        
+        <!--Testmonials-->
+        <section class="testimonials">
+            <h1>What Our Students Say</h1>
+            <p>Some Text Here</p>
+            <div class="row">
+                <div class="testimonial-col">
+                    <img src="eduford_img/user1.jpg">
+                         <div>
+                             <p> Some more text here.</p>
+                             <h3>Name goes here.</h3>
+                        </div>
+                </div>
+                 <div class="testimonial-col">
+                    <img src="eduford_img/user2.jpg">
+                         <div>
+                             <p> Texts.</p>
+                             <h3>Name goes here.</h3>
+                        </div>
+                </div>
+            </div>
+        </section>
+        
+        <!--Call To Action-->
+        <section class="cta">
+            <h1>My Portfolio Page of Various Artworks<br> Throught College</h1>
+            <a href="mailto:michaelwyue@gmail.com" class="hero-btn">CONTACT ME</a>
+        </section>
+        
+         <!--Footer-->
+        <section class="footer">
+            <h4> About Me</h4>
+            <p> Description</p>
+                <div class="icons">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                    
+                </div>
+            <p> Made by Michael Yue</p>
+        </section>
+        
+        
+        <!--Javascript toggle menu-->
+        <script>
+                var navLinks = document.getElementById("navLinks");
+                
+                function showMenu(){
+                    navLinks.style.right = "0";
+                }
+                
+                function hideMenu(){
+                    navLinks.style.right="-200px";
+                }
+        </script>
+    </body>
+</html>
